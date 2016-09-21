@@ -94,8 +94,8 @@ RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe
 }).addDisposableTo(disposeBag)
 ```
 
-## ObjectMapper
-If you're using [ObjectMapper](https://github.com/Hearst-DD/ObjectMapper), see [Moya-ObjectMapper](https://github.com/ivanbruel/Moya-ObjectMapper) which inspired me to create this one.
+## Other repo's
+If you're using [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON), checkout [Moya-SwiftyJSONMapper](https://github.com/AvdLee/Moya-SwiftyJSONMapper)
 
 ## Author
 
