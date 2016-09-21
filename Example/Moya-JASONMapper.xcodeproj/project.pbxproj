@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25347CC98C7C82CCA779EF92 /* Pods_Moya_JASONMapper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CED15055C111081E41A367D /* Pods_Moya_JASONMapper_Example.framework */; };
-		38C5C4FB9BD8C9BEF7B8126E /* Pods_Moya_JASONMapper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78FE336199C477C3FC53FE4F /* Pods_Moya_JASONMapper_Tests.framework */; };
+		4A361387C896170F99D96B0D /* Pods_Moya_JASONMapper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BA5E17049F1EE22B1D5A48 /* Pods_Moya_JASONMapper_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -19,6 +18,7 @@
 		730500B21D06C6A40066522A /* array_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 730500AE1D06C6A40066522A /* array_response.json */; };
 		730500B31D06C6A40066522A /* object_response.json in Resources */ = {isa = PBXBuildFile; fileRef = 730500AF1D06C6A40066522A /* object_response.json */; };
 		730500C11D06CD3E0066522A /* Moya_JASONMapper_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730500C01D06CD3E0066522A /* Moya_JASONMapper_Tests.swift */; };
+		A379D54E914B25834CDF0E90 /* Pods_Moya_JASONMapper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5713B77BE5E157CD142EC0E4 /* Pods_Moya_JASONMapper_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		282B2301CDD7D0F8D82FA210 /* Pods-Moya-JASONMapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-JASONMapper_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-JASONMapper_Example/Pods-Moya-JASONMapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2CED15055C111081E41A367D /* Pods_Moya_JASONMapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moya_JASONMapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		373EABF47832589B57F2F777 /* Pods-Moya-JASONMapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-JASONMapper_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-JASONMapper_Tests/Pods-Moya-JASONMapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A0EAF5ED5D3D409C233EABC /* Pods-Moya-JASONMapper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-JASONMapper_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-JASONMapper_Tests/Pods-Moya-JASONMapper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		50E6491EBF593027302B3380 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5713B77BE5E157CD142EC0E4 /* Pods_Moya_JASONMapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moya_JASONMapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* Moya-JASONMapper_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Moya-JASONMapper_Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		72DF38832FBBB0F14417586E /* Pods-Moya-JASONMapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-JASONMapper_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-JASONMapper_Tests/Pods-Moya-JASONMapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		730500AA1D06C6A40066522A /* ExampleAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleAPI.swift; sourceTree = "<group>"; };
 		730500AC1D06C6A40066522A /* GetResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetResponse.swift; sourceTree = "<group>"; };
 		730500AE1D06C6A40066522A /* array_response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = array_response.json; sourceTree = "<group>"; };
@@ -50,11 +50,11 @@
 		730500BE1D06CD3E0066522A /* Moya-JASONMapper_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Moya-JASONMapper_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		730500C01D06CD3E0066522A /* Moya_JASONMapper_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moya_JASONMapper_Tests.swift; sourceTree = "<group>"; };
 		730500C21D06CD3E0066522A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78FE336199C477C3FC53FE4F /* Pods_Moya_JASONMapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moya_JASONMapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A6E15003C9DD7C2DE222C45 /* Pods-Moya-JASONMapper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-JASONMapper_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-JASONMapper_Example/Pods-Moya-JASONMapper_Example.release.xcconfig"; sourceTree = "<group>"; };
+		857A40ED9F46FD9CA6E66A0A /* Pods-Moya-JASONMapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-JASONMapper_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-JASONMapper_Example/Pods-Moya-JASONMapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8E2B5B6FBF1BB18DEF9A6ED5 /* Pods-Moya-JASONMapper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-JASONMapper_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-JASONMapper_Example/Pods-Moya-JASONMapper_Example.release.xcconfig"; sourceTree = "<group>"; };
 		964E6DF8BCE6E96F9E8C6A8F /* Moya-JASONMapper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "Moya-JASONMapper.podspec"; path = "../Moya-JASONMapper.podspec"; sourceTree = "<group>"; };
-		9719A140B353B9111E890E90 /* Pods-Moya-JASONMapper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moya-JASONMapper_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moya-JASONMapper_Tests/Pods-Moya-JASONMapper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		99AC48D523EE1CB96F88F9B9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C4BA5E17049F1EE22B1D5A48 /* Pods_Moya_JASONMapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moya_JASONMapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25347CC98C7C82CCA779EF92 /* Pods_Moya_JASONMapper_Example.framework in Frameworks */,
+				A379D54E914B25834CDF0E90 /* Pods_Moya_JASONMapper_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,20 +70,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38C5C4FB9BD8C9BEF7B8126E /* Pods_Moya_JASONMapper_Tests.framework in Frameworks */,
+				4A361387C896170F99D96B0D /* Pods_Moya_JASONMapper_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		011FCB5BBD70803EAE78ACBF /* Pods */ = {
+		1F45B5B7D515D56EE2EAE1D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				282B2301CDD7D0F8D82FA210 /* Pods-Moya-JASONMapper_Example.debug.xcconfig */,
-				8A6E15003C9DD7C2DE222C45 /* Pods-Moya-JASONMapper_Example.release.xcconfig */,
-				373EABF47832589B57F2F777 /* Pods-Moya-JASONMapper_Tests.debug.xcconfig */,
-				9719A140B353B9111E890E90 /* Pods-Moya-JASONMapper_Tests.release.xcconfig */,
+				857A40ED9F46FD9CA6E66A0A /* Pods-Moya-JASONMapper_Example.debug.xcconfig */,
+				8E2B5B6FBF1BB18DEF9A6ED5 /* Pods-Moya-JASONMapper_Example.release.xcconfig */,
+				72DF38832FBBB0F14417586E /* Pods-Moya-JASONMapper_Tests.debug.xcconfig */,
+				1A0EAF5ED5D3D409C233EABC /* Pods-Moya-JASONMapper_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -95,8 +95,8 @@
 				607FACD21AFB9204008FA782 /* Example for Moya-JASONMapper */,
 				730500BF1D06CD3E0066522A /* Moya-JASONMapper_Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				011FCB5BBD70803EAE78ACBF /* Pods */,
-				76F6A0781C4A82299C21982E /* Frameworks */,
+				1F45B5B7D515D56EE2EAE1D2 /* Pods */,
+				747C2F79AB88D9304BEDCA97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,11 +170,11 @@
 			path = "Moya-JASONMapper_Tests";
 			sourceTree = "<group>";
 		};
-		76F6A0781C4A82299C21982E /* Frameworks */ = {
+		747C2F79AB88D9304BEDCA97 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2CED15055C111081E41A367D /* Pods_Moya_JASONMapper_Example.framework */,
-				78FE336199C477C3FC53FE4F /* Pods_Moya_JASONMapper_Tests.framework */,
+				5713B77BE5E157CD142EC0E4 /* Pods_Moya_JASONMapper_Example.framework */,
+				C4BA5E17049F1EE22B1D5A48 /* Pods_Moya_JASONMapper_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,12 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Moya-JASONMapper_Example" */;
 			buildPhases = (
-				190B73CF9041E7EF1DF58B4B /* Check Pods Manifest.lock */,
+				ED262CA3072A87F4C11690F9 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				03D2F39061D23818C6662E71 /* Embed Pods Frameworks */,
-				4FB241B8C17AE408B7F9BE2C /* Copy Pods Resources */,
+				0A8CC4413275734E9369D6E1 /* [CP] Embed Pods Frameworks */,
+				3FBFD9E8E14BA10FF0310FDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,12 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 730500C51D06CD3E0066522A /* Build configuration list for PBXNativeTarget "Moya-JASONMapper_Tests" */;
 			buildPhases = (
-				F709C2E770D09815E943741E /* Check Pods Manifest.lock */,
+				AB453E6C97BDEEA4E4BD56C6 /* [CP] Check Pods Manifest.lock */,
 				730500BA1D06CD3E0066522A /* Sources */,
 				730500BB1D06CD3E0066522A /* Frameworks */,
 				730500BC1D06CD3E0066522A /* Resources */,
-				7AF1D475AAD8ABB92E2F2F5E /* Embed Pods Frameworks */,
-				3C4B41E9082ED0C487B80F92 /* Copy Pods Resources */,
+				F7B1458A3597738391519C2A /* [CP] Embed Pods Frameworks */,
+				97D24F8E0CC51217269A4CA7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,7 +230,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
@@ -284,14 +284,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		03D2F39061D23818C6662E71 /* Embed Pods Frameworks */ = {
+		0A8CC4413275734E9369D6E1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,44 +299,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moya-JASONMapper_Example/Pods-Moya-JASONMapper_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		190B73CF9041E7EF1DF58B4B /* Check Pods Manifest.lock */ = {
+		3FBFD9E8E14BA10FF0310FDF /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3C4B41E9082ED0C487B80F92 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moya-JASONMapper_Tests/Pods-Moya-JASONMapper_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FB241B8C17AE408B7F9BE2C /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,34 +314,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moya-JASONMapper_Example/Pods-Moya-JASONMapper_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7AF1D475AAD8ABB92E2F2F5E /* Embed Pods Frameworks */ = {
+		97D24F8E0CC51217269A4CA7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moya-JASONMapper_Tests/Pods-Moya-JASONMapper_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB453E6C97BDEEA4E4BD56C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED262CA3072A87F4C11690F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F7B1458A3597738391519C2A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moya-JASONMapper_Tests/Pods-Moya-JASONMapper_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F709C2E770D09815E943741E /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -439,8 +439,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -468,6 +470,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -484,8 +487,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -504,14 +509,17 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 282B2301CDD7D0F8D82FA210 /* Pods-Moya-JASONMapper_Example.debug.xcconfig */;
+			baseConfigurationReference = 857A40ED9F46FD9CA6E66A0A /* Pods-Moya-JASONMapper_Example.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Moya-JASONMapper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -523,8 +531,9 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A6E15003C9DD7C2DE222C45 /* Pods-Moya-JASONMapper_Example.release.xcconfig */;
+			baseConfigurationReference = 8E2B5B6FBF1BB18DEF9A6ED5 /* Pods-Moya-JASONMapper_Example.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Moya-JASONMapper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -536,8 +545,9 @@
 		};
 		730500C61D06CD3E0066522A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 373EABF47832589B57F2F777 /* Pods-Moya-JASONMapper_Tests.debug.xcconfig */;
+			baseConfigurationReference = 72DF38832FBBB0F14417586E /* Pods-Moya-JASONMapper_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -552,8 +562,9 @@
 		};
 		730500C71D06CD3E0066522A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9719A140B353B9111E890E90 /* Pods-Moya-JASONMapper_Tests.release.xcconfig */;
+			baseConfigurationReference = 1A0EAF5ED5D3D409C233EABC /* Pods-Moya-JASONMapper_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				INFOPLIST_FILE = "Moya-JASONMapper_Tests/Info.plist";

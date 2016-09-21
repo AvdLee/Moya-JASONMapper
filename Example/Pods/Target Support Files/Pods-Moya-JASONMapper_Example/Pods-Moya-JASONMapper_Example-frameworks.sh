@@ -16,7 +16,7 @@ install_framework()
     local source="$1"
   fi
 
-  local destination="${CONFIGURATION_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+  local destination="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
   if [ -L "${source}" ]; then
       echo "Symlinked..."
@@ -59,8 +59,8 @@ code_sign_if_enabled() {
   if [ -n "${EXPANDED_CODE_SIGN_IDENTITY}" -a "${CODE_SIGNING_REQUIRED}" != "NO" -a "${CODE_SIGNING_ALLOWED}" != "NO" ]; then
     # Use the current code_sign_identitiy
     echo "Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}"
-    echo "/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements \"$1\""
-    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements "$1"
+    echo "/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements \"$1\""
+    /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} ${OTHER_CODE_SIGN_FLAGS} --preserve-metadata=identifier,entitlements "$1"
   fi
 }
 
@@ -84,20 +84,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-Moya-JASONMapper_Example/Alamofire.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/JASON.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/Moya.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/Moya_JASONMapper.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/ReactiveCocoa.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/Result.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/RxSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Alamofire-iOS8.3/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JASON-iOS8.3/JASON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Moya-iOS8.3/Moya.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Moya-JASONMapper-iOS8.3/Moya_JASONMapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ReactiveCocoa-iOS8.3/ReactiveCocoa.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Result-iOS8.3/Result.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RxSwift-iOS8.3/RxSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-Moya-JASONMapper_Example/Alamofire.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/JASON.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/Moya.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/Moya_JASONMapper.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/ReactiveCocoa.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/Result.framework"
-  install_framework "Pods-Moya-JASONMapper_Example/RxSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Alamofire-iOS8.3/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JASON-iOS8.3/JASON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Moya-iOS8.3/Moya.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Moya-JASONMapper-iOS8.3/Moya_JASONMapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ReactiveCocoa-iOS8.3/ReactiveCocoa.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Result-iOS8.3/Result.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RxSwift-iOS8.3/RxSwift.framework"
 fi

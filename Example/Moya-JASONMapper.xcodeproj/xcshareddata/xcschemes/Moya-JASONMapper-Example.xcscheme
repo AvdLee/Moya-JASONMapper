@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0800"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BlueprintIdentifier = "730500BD1D06CD3E0066522A"
                BuildableName = "Moya-JASONMapper_Tests.xctest"
                BlueprintName = "Moya-JASONMapper_Tests"
                ReferencedContainer = "container:Moya-JASONMapper.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BlueprintIdentifier = "730500BD1D06CD3E0066522A"
                BuildableName = "Moya-JASONMapper_Tests.xctest"
                BlueprintName = "Moya-JASONMapper_Tests"
                ReferencedContainer = "container:Moya-JASONMapper.xcodeproj">

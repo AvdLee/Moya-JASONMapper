@@ -53,6 +53,7 @@ extension ExampleAPI: JSONMappableTargetType {
             return GetResponse.self
         }
     }
+    var multipartBody: [Moya.MultipartFormData]? { return nil }
 }
 
 // Then add an additional request method
@@ -73,7 +74,7 @@ func requestType<T:ALJSONAble>(target: ExampleAPI) -> SignalProducer<T, Moya.Err
             
             return SignalProducer(value: mappedObject)
         } catch let error {
-            return SignalProducer(error: Moya.Error.Underlying(error))
+            return SignalProducer(error: Moya.Error.Underlying(error as NSError))
         }
     })
 }

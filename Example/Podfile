@@ -1,15 +1,26 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'Moya-JASONMapper_Example', :exclusive => true do
-  pod 'Moya-JASONMapper', :path => '../'
-  pod 'Moya-JASONMapper/RxSwift', :path => '../'
-  pod 'Moya-JASONMapper/ReactiveCocoa', :path => '../'
+def sharedPods
+    pod 'JASON', :git => 'https://github.com/delba/JASON.git', :branch => 'swift-2.3'
+    pod 'Moya-JASONMapper', :path => '../'
+    pod 'Moya-JASONMapper/RxSwift', :path => '../'
+    pod 'Moya-JASONMapper/ReactiveCocoa', :path => '../'
 end
 
-target 'Moya-JASONMapper_Tests', :exclusive => true do
-  pod 'Moya-JASONMapper', :path => '../'
-  pod 'Moya-JASONMapper/RxSwift', :path => '../'
-  pod 'Moya-JASONMapper/ReactiveCocoa', :path => '../'
-  
+target 'Moya-JASONMapper_Example' do
+  sharedPods
+end
+
+target 'Moya-JASONMapper_Tests' do
+  sharedPods
+end
+
+# Build configurations
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '2.3'
+        end
+    end
 end

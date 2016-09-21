@@ -1,6 +1,0 @@
-framework module Moya_JASONMapper {
-  umbrella header "Moya-JASONMapper-umbrella.h"
-
-  export *
-  module * { export * }
-}
