@@ -16,27 +16,27 @@ import Moya
 class Moya_JASONMapper_Tests: XCTestCase {
     
     func testCoreMappingObject(){
-        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse.")
+        let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse.")
         
         var getResponseObject:GetResponse?
-        var errorValue:ErrorType?
+        var errorValue:Moya.Error?
         
-        let cancellableRequest:Cancellable = stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
+        let cancellableRequest:Cancellable = stubbedProvider.request(ExampleAPI.getObject) { (result) -> () in
             switch result {
-            case let .Success(response):
+            case let .success(response):
                 do {
-                    getResponseObject = try response.mapObject(GetResponse)
+                    getResponseObject = try response.map(to: GetResponse.self)
                     expectation.fulfill()
                 } catch {
                     expectation.fulfill()
                 }
-            case let .Failure(error):
+            case let .failure(error):
                 errorValue = error
                 expectation.fulfill()
             }
         }
         
-        waitForExpectationsWithTimeout(10.0) { (error) in
+        waitForExpectations(timeout: 10.0) { (error) in
             XCTAssertNil(errorValue, "We have an unexpected error value")
             XCTAssertNotNil(getResponseObject, "We should have a parsed getResponseObject")
             
@@ -45,21 +45,24 @@ class Moya_JASONMapper_Tests: XCTestCase {
     }
     
     func testReactiveCocoaMappingObject(){
-        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
+        let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
         var getResponseObject:GetResponse?
-        var errorValue:ErrorType?
+        var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse)
-            .on(failed: { (error) -> () in
-                errorValue = error
-                }, completed: { () -> () in
+        let disposable = RCStubbedProvider.request(token: ExampleAPI.getObject).mapObject(to: GetResponse.self)
+            .on(value: { (response) -> () in
+                    getResponseObject = response
+                },
+                failed: { (error) -> () in
+                    errorValue = error
+                },
+                completed: { () -> () in
                     expectation.fulfill()
-            }) { (response) -> () in
-                getResponseObject = response
-            }.start()
+                }
+            ).start()
         
-        waitForExpectationsWithTimeout(10.0) { (error) in
+        waitForExpectations(timeout: 10.0) { (error) in
             XCTAssertNil(errorValue, "We have an unexpected error value")
             XCTAssertNotNil(getResponseObject, "We should have a parsed getResponseObject")
             
@@ -68,21 +71,21 @@ class Moya_JASONMapper_Tests: XCTestCase {
     }
     
     func testRxSwiftMappingObject(){
-        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
+        let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
         var getResponseObject:GetResponse?
-        var errorValue:ErrorType?
+        var errorValue:Moya.Error?
         
-        let disposable = RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe(onNext: { (response) -> Void in
+        let disposable = RXStubbedProvider.request(ExampleAPI.getObject).mapObject(to: GetResponse.self).subscribe(onNext: { (response) -> Void in
             getResponseObject = response
             }, onError: { (error) -> Void in
-                errorValue = error
+                errorValue = error as? Moya.Error
                 expectation.fulfill()
             }, onCompleted: { () -> Void in
                 expectation.fulfill()
         })
         
-        waitForExpectationsWithTimeout(10.0) { (error) in
+        waitForExpectations(timeout: 10.0) { (error) in
             XCTAssertNil(errorValue, "We have an unexpected error value")
             XCTAssertNotNil(getResponseObject, "We should have a parsed getResponseObject")
             
@@ -91,27 +94,27 @@ class Moya_JASONMapper_Tests: XCTestCase {
     }
     
     func testCoreMappingArray(){
-        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse.")
+        let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse.")
         
         var getResponseArray:[GetResponse]?
-        var errorValue:ErrorType?
+        var errorValue:Moya.Error?
         
-        let cancellableRequest:Cancellable = stubbedProvider.request(ExampleAPI.GetArray) { (result) -> () in
+        let cancellableRequest:Cancellable = stubbedProvider.request(ExampleAPI.getArray) { (result) -> () in
             switch result {
-            case let .Success(response):
+            case let .success(response):
                 do {
-                    getResponseArray = try response.mapArray(GetResponse)
+                    getResponseArray = try response.map(to: [GetResponse.self])
                     expectation.fulfill()
                 } catch {
                     expectation.fulfill()
                 }
-            case let .Failure(error):
+            case let .failure(error):
                 errorValue = error
                 expectation.fulfill()
             }
         }
         
-        waitForExpectationsWithTimeout(10.0) { (error) in
+        waitForExpectations(timeout: 10.0) { (error) in
             XCTAssertNil(errorValue, "We have an unexpected error value")
             XCTAssertNotNil(getResponseArray, "We should have a parsed getResponseObject")
             
@@ -120,21 +123,23 @@ class Moya_JASONMapper_Tests: XCTestCase {
     }
     
     func testReactiveCocoaMappingArray(){
-        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
+        let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
         var getResponseArray:[GetResponse]?
-        var errorValue:ErrorType?
+        var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(ExampleAPI.GetArray).mapArray(GetResponse)
-            .on(failed: { (error) -> () in
-                errorValue = error
-                }, completed: { () -> () in
+        let disposable = RCStubbedProvider.request(token: ExampleAPI.getArray).mapArray(to: GetResponse.self)
+            .on(value: { (response) -> () in
+                    getResponseArray = response
+                },
+                failed: { (error) -> () in
+                    errorValue = error
+                },
+                completed: { () -> () in
                     expectation.fulfill()
-            }) { (response) -> () in
-                getResponseArray = response
-            }.start()
+            }).start()
         
-        waitForExpectationsWithTimeout(10.0) { (error) in
+        waitForExpectations(timeout: 10.0) { (error) in
             XCTAssertNil(errorValue, "We have an unexpected error value")
             XCTAssertNotNil(getResponseArray, "We should have a parsed getResponseObject")
             
@@ -143,21 +148,21 @@ class Moya_JASONMapper_Tests: XCTestCase {
     }
     
     func testRxSwiftMappingArray(){
-        let expectation = expectationWithDescription("This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
+        let expectation = self.expectation(description: "This call call a Get API call and returns a GetResponse through a ReactiveCocoa signal.")
         
         var getResponseArray:[GetResponse]?
-        var errorValue:ErrorType?
+        var errorValue:Moya.Error?
         
-        let disposable = RXStubbedProvider.request(ExampleAPI.GetArray).mapArray(GetResponse).subscribe(onNext: { (response) -> Void in
+        let disposable = RXStubbedProvider.request(ExampleAPI.getArray).mapArray(to: GetResponse.self).subscribe(onNext: { (response) -> Void in
             getResponseArray = response
             }, onError: { (error) -> Void in
-                errorValue = error
+                errorValue = error as? Moya.Error
                 expectation.fulfill()
             }, onCompleted: { () -> Void in
                 expectation.fulfill()
         })
         
-        waitForExpectationsWithTimeout(10.0) { (error) in
+        waitForExpectations(timeout: 10.0) { (error) in
             XCTAssertNil(errorValue, "We have an unexpected error value")
             XCTAssertNotNil(getResponseArray, "We should have a parsed getResponseObject")
             

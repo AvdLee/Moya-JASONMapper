@@ -1,62 +1,57 @@
 PODS:
-  - Alamofire (3.5.0)
-  - JASON (2.2.1)
-  - Moya (7.0.2):
-    - Moya/Core (= 7.0.2)
+  - Alamofire (4.0.1)
+  - JASON (3.0)
+  - Moya (8.0.0-beta.2):
+    - Moya/Core (= 8.0.0-beta.2)
   - Moya-JASONMapper (1.0.0):
     - Moya-JASONMapper/Core (= 1.0.0)
   - Moya-JASONMapper/Core (1.0.0):
     - JASON
-    - Moya
+    - Moya (= 8.0.0-beta.2)
   - Moya-JASONMapper/ReactiveCocoa (1.0.0):
     - Moya-JASONMapper/Core
     - Moya/ReactiveCocoa
-    - ReactiveCocoa
+    - ReactiveSwift (= 1.0.0-alpha.2)
   - Moya-JASONMapper/RxSwift (1.0.0):
-    - Moya-JASONMapper/Core
     - Moya/RxSwift
+    - RxCocoa (= 3.0.0-beta.1)
+    - RxSwift (= 3.0.0-beta.1)
+  - Moya/Core (8.0.0-beta.2):
+    - Alamofire (~> 4.0.0)
+    - Result
+  - Moya/ReactiveCocoa (8.0.0-beta.2):
+    - Moya/Core
+    - ReactiveSwift
+  - Moya/RxSwift (8.0.0-beta.2):
+    - Moya/Core
     - RxSwift
-  - Moya/Core (7.0.2):
-    - Alamofire (~> 3.5)
-    - Result (~> 2.0)
-  - Moya/ReactiveCocoa (7.0.2):
-    - Moya/Core
-    - ReactiveCocoa (~> 4.0)
-  - Moya/RxSwift (7.0.2):
-    - Moya/Core
-    - RxSwift (~> 2.0)
-  - ReactiveCocoa (4.2.2):
-    - Result (~> 2.0)
-  - Result (2.1.3)
-  - RxSwift (2.6.0)
+  - ReactiveSwift (1.0.0-alpha.2):
+    - Result (~> 3.0)
+  - Result (3.0.0)
+  - RxCocoa (3.0.0-beta.1):
+    - RxSwift (~> 3.0.0-beta.1)
+  - RxSwift (3.0.0-beta.1)
 
 DEPENDENCIES:
-  - JASON (from `https://github.com/delba/JASON.git`, branch `swift-2.3`)
+  - JASON
   - Moya-JASONMapper (from `../`)
   - Moya-JASONMapper/ReactiveCocoa (from `../`)
   - Moya-JASONMapper/RxSwift (from `../`)
 
 EXTERNAL SOURCES:
-  JASON:
-    :branch: swift-2.3
-    :git: https://github.com/delba/JASON.git
   Moya-JASONMapper:
     :path: ../
 
-CHECKOUT OPTIONS:
-  JASON:
-    :commit: 686526a010a8d7cf09d577ffbd26408f74b9235a
-    :git: https://github.com/delba/JASON.git
-
 SPEC CHECKSUMS:
-  Alamofire: b70a7352335f8ea5babd0a923eb7e8eacc67b877
-  JASON: 2fdba956dfbf8663369b81a8176e6fcb225ebf10
-  Moya: 430be684a6a53d5ad8c0b8222c4232d4f1810848
-  Moya-JASONMapper: 056f83c79fbfa7f96c95399f3f8c2b22b5120268
-  ReactiveCocoa: 72263e7ac0770c274617ccd345e01049d0ca38ae
-  Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
-  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  JASON: cf4d762e61428a20db8eaef2acb6a569a10c1801
+  Moya: 920d40f738e6f4ece84010cec701bb9693be8251
+  Moya-JASONMapper: a26281f4af49d584b10702b90c6ee707752786e0
+  ReactiveSwift: 967383cc7b58baa05c997965f9a76b7fd796f2a7
+  Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
+  RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
+  RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
 
-PODFILE CHECKSUM: de2db245796bdccfdacf58101c2e0b7904170dce
+PODFILE CHECKSUM: cb9ddc1dc1be2447873bfc7e71d052a97eaef207
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.0.1

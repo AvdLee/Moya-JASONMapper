@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 import Moya_JASONMapper
-import ReactiveCocoa
+import ReactiveSwift
 import JASON
 
 let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
@@ -17,39 +17,42 @@ let RCStubbedProvider = ReactiveCocoaMoyaProvider<ExampleAPI>(stubClosure: MoyaP
 let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
 
 enum ExampleAPI {
-    case GetObject
-    case GetArray
+    case getObject
+    case getArray
 }
 
 extension ExampleAPI: JSONMappableTargetType {
-    var baseURL: NSURL { return NSURL(string: "https://httpbin.org")! }
+    var baseURL: URL { return URL(string: "https://httpbin.org")! }
     var path: String {
         switch self {
-        case .GetObject:
+        case .getObject:
             return "/get"
-        case .GetArray:
+        case .getArray:
             return "/getarray" // Does not really works, but will work for stubbed response
         }
     }
     var method: Moya.Method {
         return .GET
     }
-    var parameters: [String: AnyObject]? {
+    var parameters: [String: Any]? {
         return nil
     }
-    var sampleData: NSData {
+    var sampleData: Data {
         switch self {
-        case .GetObject:
+        case .getObject:
             return stubbedResponseFromJSONFile("object_response")
-        case .GetArray:
+        case .getArray:
             return stubbedResponseFromJSONFile("array_response")   
         }
     }
+    var task: Task {
+        return .request
+    }
     var responseType: ALJSONAble.Type {
         switch self {
-        case .GetObject:
+        case .getObject:
             return GetResponse.self
-        case .GetArray:
+        case .getArray:
             return GetResponse.self
         }
     }
@@ -63,18 +66,18 @@ extension ExampleAPI: JSONMappableTargetType {
 //}
 
 // Works but has al the mapping logic in it, I don't want that!
-func requestType<T:ALJSONAble>(target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
-    return RCStubbedProvider.request(target).flatMap(FlattenStrategy.Latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
+func requestType<T:ALJSONAble>(_ target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
+    return RCStubbedProvider.request(token: target).flatMap(FlattenStrategy.latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
         do {
             let jsonObject = try response.mapJSON()
             
             guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
-                throw Error.JSONMapping(response)
+                throw Moya.Error.jsonMapping(response)
             }
             
             return SignalProducer(value: mappedObject)
         } catch let error {
-            return SignalProducer(error: Moya.Error.Underlying(error as NSError))
+            return SignalProducer(error: Moya.Error.underlying(error as NSError))
         }
     })
 }
@@ -83,7 +86,7 @@ protocol JSONMappableTargetType: TargetType {
     var responseType: ALJSONAble.Type { get }
 }
 
-private func stubbedResponseFromJSONFile(filename: String, inDirectory subpath: String = "", bundle:NSBundle = NSBundle.mainBundle() ) -> NSData {
-    guard let path = bundle.pathForResource(filename, ofType: "json", inDirectory: subpath) else { return NSData() }
-    return NSData(contentsOfFile: path) ?? NSData()
+private func stubbedResponseFromJSONFile(_ filename: String, inDirectory subpath: String = "", bundle:Bundle = Bundle.main ) -> Data {
+    guard let path = bundle.path(forResource: filename, ofType: "json", inDirectory: subpath) else { return Data() }
+    return (try? Data(contentsOf: URL(fileURLWithPath: path))) ?? Data()
 }
