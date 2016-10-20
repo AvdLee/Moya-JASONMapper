@@ -12,7 +12,7 @@ import JASON
 
 final class GetResponse : ALJSONAble {
     
-    let url:NSURL?
+    let url:URL?
     let origin:String
     let args:[String: String]?
     
