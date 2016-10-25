@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Moya-JASONMapper"
-  s.version          = "1.0.0"
+  s.version          = "2.0.0"
   s.summary          = "Map objects through JASON in combination with Moya"
   s.description  = <<-EOS
     [JASON](https://github.com/delba/JASON) bindings for

@@ -33,5 +33,17 @@ public extension Response {
         
         return mappedObjectsArray
     }
+}
 
+extension Response {
+    
+    @available(*, unavailable, renamed: "map(to:)")
+    public func mapObject<T: ALJSONAble>(type:T.Type) throws -> T {
+        return try map(to: type)
+    }
+    
+    @available(*, unavailable, renamed: "map(to:)")
+    public func mapArray<T: ALJSONAble>(type:T.Type) throws -> [T] {
+        return try map(to: [type])
+    }
 }
