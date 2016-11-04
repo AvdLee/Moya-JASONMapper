@@ -1,37 +1,37 @@
 PODS:
   - Alamofire (4.0.1)
   - JASON (3.0)
-  - Moya (8.0.0-beta.2):
-    - Moya/Core (= 8.0.0-beta.2)
-  - Moya-JASONMapper (2.0.0):
-    - Moya-JASONMapper/Core (= 2.0.0)
-  - Moya-JASONMapper/Core (2.0.0):
+  - Moya (8.0.0-beta.3):
+    - Moya/Core (= 8.0.0-beta.3)
+  - Moya-JASONMapper (2.0.1):
+    - Moya-JASONMapper/Core (= 2.0.1)
+  - Moya-JASONMapper/Core (2.0.1):
     - JASON
-    - Moya (= 8.0.0-beta.2)
-  - Moya-JASONMapper/ReactiveCocoa (2.0.0):
+    - Moya (= 8.0.0-beta.3)
+  - Moya-JASONMapper/ReactiveCocoa (2.0.1):
     - Moya-JASONMapper/Core
     - Moya/ReactiveCocoa
-    - ReactiveSwift (= 1.0.0-alpha.2)
-  - Moya-JASONMapper/RxSwift (2.0.0):
+    - ReactiveSwift (= 1.0.0-alpha.3)
+  - Moya-JASONMapper/RxSwift (2.0.1):
     - Moya-JASONMapper/Core
-    - Moya/RxSwift (= 8.0.0-beta.2)
-    - RxCocoa (= 3.0.0-beta.1)
-    - RxSwift (= 3.0.0-beta.1)
-  - Moya/Core (8.0.0-beta.2):
+    - Moya/RxSwift (= 8.0.0-beta.3)
+    - RxCocoa (~> 3.0.0)
+    - RxSwift (~> 3.0.0)
+  - Moya/Core (8.0.0-beta.3):
     - Alamofire (~> 4.0.0)
     - Result
-  - Moya/ReactiveCocoa (8.0.0-beta.2):
+  - Moya/ReactiveCocoa (8.0.0-beta.3):
     - Moya/Core
     - ReactiveSwift
-  - Moya/RxSwift (8.0.0-beta.2):
+  - Moya/RxSwift (8.0.0-beta.3):
     - Moya/Core
     - RxSwift
-  - ReactiveSwift (1.0.0-alpha.2):
+  - ReactiveSwift (1.0.0-alpha.3):
     - Result (~> 3.0)
   - Result (3.0.0)
-  - RxCocoa (3.0.0-beta.1):
-    - RxSwift (~> 3.0.0-beta.1)
-  - RxSwift (3.0.0-beta.1)
+  - RxCocoa (3.0.0):
+    - RxSwift (~> 3.0)
+  - RxSwift (3.0.0)
 
 DEPENDENCIES:
   - JASON
@@ -46,12 +46,12 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   JASON: cf4d762e61428a20db8eaef2acb6a569a10c1801
-  Moya: 920d40f738e6f4ece84010cec701bb9693be8251
-  Moya-JASONMapper: 2bfe8909ba30d77f50594dee1c9aa7eb8ea2f6c1
-  ReactiveSwift: 967383cc7b58baa05c997965f9a76b7fd796f2a7
+  Moya: f83c7f81eaa28cb0151549dfcf1f3fda4440bb50
+  Moya-JASONMapper: 130775ec84a47174442c40cfc4cd74e6a64d0fb2
+  ReactiveSwift: d67b677f9574ba614d94022a88fcf456e77fa515
   Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
-  RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
-  RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
+  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
+  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
 
 PODFILE CHECKSUM: cb9ddc1dc1be2447873bfc7e71d052a97eaef207
 
