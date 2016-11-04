@@ -2,7 +2,7 @@
 
 [![Version](https://img.shields.io/cocoapods/v/Moya-JASONMapper.svg?style=flat)](http://cocoapods.org/pods/Moya-JASONMapper)
 [![Build Status](https://travis-ci.org/AvdLee/Moya-JASONMapper.svg?style=flat&branch=master)](https://travis-ci.org/AvdLee/Moya-JASONMapper)
-[![Language](https://img.shields.io/badge/language-swift2.3-f48041.svg?style=flat)](https://developer.apple.com/swift)
+[![Language](https://img.shields.io/badge/language-swift3.0-f48041.svg?style=flat)](https://developer.apple.com/swift)
 [![License](https://img.shields.io/cocoapods/l/Moya-JASONMapper.svg?style=flat)](http://cocoapods.org/pods/Moya-JASONMapper)
 [![Platform](https://img.shields.io/cocoapods/p/Moya-JASONMapper.svg?style=flat)](http://cocoapods.org/pods/Moya-JASONMapper)
 [![Twitter](https://img.shields.io/badge/twitter-@twannl-blue.svg?style=flat)](http://twitter.com/twannl)
