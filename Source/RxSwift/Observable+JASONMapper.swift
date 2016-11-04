@@ -15,7 +15,7 @@ public extension ObservableType where E == Response {
 
     /// Maps data received from the signal into an object which implements the ALJSONAble protocol.
     /// If the conversion fails, the signal errors.
-    public func mapObject<T: ALJSONAble>(to type: T.Type) -> Observable<T> {
+    public func map<T: ALJSONAble>(to type: T.Type) -> Observable<T> {
         return flatMap { response -> Observable<T> in
             return Observable.just(try response.map(to: T.self))
         }
@@ -23,7 +23,7 @@ public extension ObservableType where E == Response {
 
     /// Maps data received from the signal into an array of objects which implement the ALJSONAble protocol.
     /// If the conversion fails, the signal errors.
-    public func mapArray<T: ALJSONAble>(to type: T.Type) -> Observable<[T]> {
+    public func map<T: ALJSONAble>(to type: [T.Type]) -> Observable<[T]> {
         return flatMap { response -> Observable<[T]> in
             return Observable.just(try response.map(to: [T.self]))
         }

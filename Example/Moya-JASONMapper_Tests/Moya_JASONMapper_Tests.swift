@@ -50,7 +50,7 @@ class Moya_JASONMapper_Tests: XCTestCase {
         var getResponseObject:GetResponse?
         var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(token: ExampleAPI.getObject).mapObject(to: GetResponse.self)
+        let disposable = RCStubbedProvider.request(token: ExampleAPI.getObject).map(to: GetResponse.self)
             .on(value: { (response) -> () in
                     getResponseObject = response
                 },
@@ -76,7 +76,7 @@ class Moya_JASONMapper_Tests: XCTestCase {
         var getResponseObject:GetResponse?
         var errorValue:Moya.Error?
         
-        let disposable = RXStubbedProvider.request(ExampleAPI.getObject).mapObject(to: GetResponse.self).subscribe(onNext: { (response) -> Void in
+        let disposable = RXStubbedProvider.request(ExampleAPI.getObject).map(to: GetResponse.self).subscribe(onNext: { (response) -> Void in
             getResponseObject = response
             }, onError: { (error) -> Void in
                 errorValue = error as? Moya.Error
@@ -128,7 +128,7 @@ class Moya_JASONMapper_Tests: XCTestCase {
         var getResponseArray:[GetResponse]?
         var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(token: ExampleAPI.getArray).mapArray(to: GetResponse.self)
+        let disposable = RCStubbedProvider.request(token: ExampleAPI.getArray).map(to: [GetResponse.self])
             .on(value: { (response) -> () in
                     getResponseArray = response
                 },
@@ -153,7 +153,7 @@ class Moya_JASONMapper_Tests: XCTestCase {
         var getResponseArray:[GetResponse]?
         var errorValue:Moya.Error?
         
-        let disposable = RXStubbedProvider.request(ExampleAPI.getArray).mapArray(to: GetResponse.self).subscribe(onNext: { (response) -> Void in
+        let disposable = RXStubbedProvider.request(ExampleAPI.getArray).map(to: [GetResponse.self]).subscribe(onNext: { (response) -> Void in
             getResponseArray = response
             }, onError: { (error) -> Void in
                 errorValue = error as? Moya.Error
