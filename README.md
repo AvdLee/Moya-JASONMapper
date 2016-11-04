@@ -59,16 +59,16 @@ final class GetResponse : ALJSONAble {
 
 ### 1. Without RxSwift or ReactiveCocoa
 ```swift
-stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
+stubbedProvider.request(ExampleAPI.getObject) { (result) -> () in
     switch result {
-    case let .Success(response):
+    case let .success(response):
         do {
-            let getResponseObject = try response.mapObject(GetResponse)
+            let getResponseObject = try response.map(to: GetResponse.self)
             print(getResponseObject)
         } catch {
             print(error)
         }
-    case let .Failure(error):
+    case let .failure(error):
         print(error)
     }
 }
@@ -76,22 +76,26 @@ stubbedProvider.request(ExampleAPI.GetObject) { (result) -> () in
 
 ### 2. With ReactiveCocoa
 ```swift
-RCStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).on(failed: { (error) -> () in
-    print(error)
-}) { (response) -> () in
-    print(response)
-}.start()
+RCStubbedProvider.request(token: ExampleAPI.getObject)
+    .map(to: GetResponse.self)
+    .on(failed: { (error) -> () in
+        print(error)
+    }) { (response) -> () in
+        print(response)
+    }.start()
 ```
 
 ### 3. With RxSwift
 ```swift
 let disposeBag = DisposeBag()
 
-RXStubbedProvider.request(ExampleAPI.GetObject).mapObject(GetResponse).subscribe(onNext: { (response) -> Void in
-    print(response)
-}, onError: { (error) -> Void in
-    print(error)
-}).addDisposableTo(disposeBag)
+RXStubbedProvider.request(ExampleAPI.getObject)
+    .map(to: GetResponse.self)
+    .subscribe(onNext: { (response) -> Void in
+        print(response)
+    }, onError: { (error) -> Void in
+        print(error)
+    }).addDisposableTo(disposeBag)
 ```
 
 ## Other repo's
