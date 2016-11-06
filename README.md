@@ -28,6 +28,12 @@ And the subspec if you want to use the bindings over ReactiveCocoa.
 pod "Moya-JASONMapper/ReactiveCocoa"
 ```
 
+#### Swift version vs Pod version
+| Swift version | Pod version    |
+| ------------- | --------------- |
+| 3.X           | >= 2.0.0			|
+| 2.3           | 1.0.0			   |
+
 ## Usage
 
 ### Example project
