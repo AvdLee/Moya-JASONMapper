@@ -12,9 +12,9 @@ import Moya_JASONMapper
 import ReactiveSwift
 import JASON
 
-let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
-let RCStubbedProvider = ReactiveCocoaMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
-let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.ImmediatelyStub)
+let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let RCStubbedProvider = ReactiveCocoaMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 
 enum ExampleAPI {
     case getObject

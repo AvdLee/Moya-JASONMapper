@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/AvdLee/Moya-JASONMapper.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/twannl'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
   s.requires_arc = true
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.subspec "Core" do |ss|
     ss.source_files  = "Source/*.swift"
-    ss.dependency "Moya", "8.0.0-beta.3"
+    ss.dependency "Moya", "8.0.0-beta.4"
     ss.dependency "JASON"
     ss.framework  = "Foundation"
   end
@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
   s.subspec "RxSwift" do |ss|
     ss.source_files = "Source/RxSwift/*.swift"
     ss.dependency "Moya-JASONMapper/Core"
-    ss.dependency "Moya/RxSwift", "8.0.0-beta.3"
+    ss.dependency "Moya/RxSwift", "8.0.0-beta.4"
     ss.dependency "RxSwift", "~>3.0.0"
     ss.dependency "RxCocoa", "~> 3.0.0"
   end

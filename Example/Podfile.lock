@@ -1,58 +1,66 @@
 PODS:
-  - Alamofire (4.0.1)
-  - JASON (3.0)
-  - Moya (8.0.0-beta.3):
-    - Moya/Core (= 8.0.0-beta.3)
-  - Moya-JASONMapper (2.0.1):
-    - Moya-JASONMapper/Core (= 2.0.1)
-  - Moya-JASONMapper/Core (2.0.1):
+  - Alamofire (4.2.0)
+  - JASON (3.1)
+  - Moya (8.0.0-beta.4):
+    - Moya/Core (= 8.0.0-beta.4)
+  - Moya-JASONMapper (2.0.0):
+    - Moya-JASONMapper/Core (= 2.0.0)
+  - Moya-JASONMapper/Core (2.0.0):
     - JASON
-    - Moya (= 8.0.0-beta.3)
-  - Moya-JASONMapper/ReactiveCocoa (2.0.1):
+    - Moya (= 8.0.0-beta.4)
+  - Moya-JASONMapper/ReactiveCocoa (2.0.0):
     - Moya-JASONMapper/Core
     - Moya/ReactiveCocoa
     - ReactiveSwift (= 1.0.0-alpha.3)
-  - Moya-JASONMapper/RxSwift (2.0.1):
+  - Moya-JASONMapper/RxSwift (2.0.0):
     - Moya-JASONMapper/Core
-    - Moya/RxSwift (= 8.0.0-beta.3)
+    - Moya/RxSwift (= 8.0.0-beta.4)
     - RxCocoa (~> 3.0.0)
     - RxSwift (~> 3.0.0)
-  - Moya/Core (8.0.0-beta.3):
-    - Alamofire (~> 4.0.0)
-    - Result
-  - Moya/ReactiveCocoa (8.0.0-beta.3):
+  - Moya/Core (8.0.0-beta.4):
+    - Alamofire (~> 4.0)
+    - Result (~> 3.0)
+  - Moya/ReactiveCocoa (8.0.0-beta.4):
     - Moya/Core
     - ReactiveSwift
-  - Moya/RxSwift (8.0.0-beta.3):
+  - Moya/RxSwift (8.0.0-beta.4):
     - Moya/Core
-    - RxSwift
+    - RxSwift (~> 3.0)
   - ReactiveSwift (1.0.0-alpha.3):
     - Result (~> 3.0)
   - Result (3.0.0)
-  - RxCocoa (3.0.0):
+  - RxCocoa (3.0.1):
     - RxSwift (~> 3.0)
-  - RxSwift (3.0.0)
+  - RxSwift (3.0.1)
 
 DEPENDENCIES:
   - JASON
+  - Moya (from `https://github.com/Moya/Moya.git`)
   - Moya-JASONMapper (from `../`)
   - Moya-JASONMapper/ReactiveCocoa (from `../`)
   - Moya-JASONMapper/RxSwift (from `../`)
 
 EXTERNAL SOURCES:
+  Moya:
+    :git: https://github.com/Moya/Moya.git
   Moya-JASONMapper:
     :path: ../
 
+CHECKOUT OPTIONS:
+  Moya:
+    :commit: b0fe5de3e4cfefa20d1dd8c26ccfa8bb0ba4184e
+    :git: https://github.com/Moya/Moya.git
+
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  JASON: cf4d762e61428a20db8eaef2acb6a569a10c1801
-  Moya: f83c7f81eaa28cb0151549dfcf1f3fda4440bb50
-  Moya-JASONMapper: 130775ec84a47174442c40cfc4cd74e6a64d0fb2
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  JASON: c1204b01c9979eef35b6948ca939aac5e7bef081
+  Moya: f51e8207a1db1c1de76dee94afc5b132785d0ed3
+  Moya-JASONMapper: 1cf055bca3b871530badfa8285ce41302044c2a3
   ReactiveSwift: d67b677f9574ba614d94022a88fcf456e77fa515
   Result: 1b3e431f37cbcd3ad89c6aa9ab0ae55515fae3b6
-  RxCocoa: 0a2f3ae381cf16f4021a4cee7a4420f83058a965
-  RxSwift: a930cd662f5b4a7ca9dc3518585dba91dadf497c
+  RxCocoa: 15a52fc590dcc700cb4a690a633b5c5184ce3a78
+  RxSwift: af5680055c4ad04480189c52d28385b1029493a6
 
-PODFILE CHECKSUM: cb9ddc1dc1be2447873bfc7e71d052a97eaef207
+PODFILE CHECKSUM: e1b4c764293a694bced93b3b0fda8382c07e5051
 
 COCOAPODS: 1.1.1

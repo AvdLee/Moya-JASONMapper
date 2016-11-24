@@ -1,10 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-platform :ios, '9.0'
+platform :ios, '8.0'
 
 def sharedPods
     pod 'JASON'
+    pod 'Moya', :git => 'https://github.com/Moya/Moya.git'
     pod 'Moya-JASONMapper', :path => '../'
     pod 'Moya-JASONMapper/RxSwift', :path => '../'
     pod 'Moya-JASONMapper/ReactiveCocoa', :path => '../'

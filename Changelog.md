@@ -1,3 +1,8 @@
+# 2.1.0
+
+- Supporting iOS 8 again
+- Using beta 4 of Moya
+
 # 2.0.0
 
 - Updated to Swift 3.0
