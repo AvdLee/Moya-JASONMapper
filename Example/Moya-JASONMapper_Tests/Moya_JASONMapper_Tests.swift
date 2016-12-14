@@ -50,16 +50,16 @@ class Moya_JASONMapper_Tests: XCTestCase {
         var getResponseObject:GetResponse?
         var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(token: ExampleAPI.getObject).map(to: GetResponse.self)
-            .on(value: { (response) -> () in
-                    getResponseObject = response
-                },
-                failed: { (error) -> () in
-                    errorValue = error
-                },
+        let disposable = RCStubbedProvider.request(ExampleAPI.getObject).map(to: GetResponse.self)
+            .on(failed: { (error) -> () in
+                errorValue = error
+            },
                 completed: { () -> () in
                     expectation.fulfill()
-                }
+            },
+                value: { (response) -> () in
+                    getResponseObject = response
+            }
             ).start()
         
         waitForExpectations(timeout: 10.0) { (error) in
@@ -128,15 +128,15 @@ class Moya_JASONMapper_Tests: XCTestCase {
         var getResponseArray:[GetResponse]?
         var errorValue:Moya.Error?
         
-        let disposable = RCStubbedProvider.request(token: ExampleAPI.getArray).map(to: [GetResponse.self])
-            .on(value: { (response) -> () in
-                    getResponseArray = response
-                },
-                failed: { (error) -> () in
-                    errorValue = error
-                },
+        let disposable = RCStubbedProvider.request(ExampleAPI.getArray).map(to: [GetResponse.self])
+            .on(failed: { (error) -> () in
+                errorValue = error
+            },
                 completed: { () -> () in
                     expectation.fulfill()
+            },
+                value: { (response) -> () in
+                    getResponseArray = response
             }).start()
         
         waitForExpectations(timeout: 10.0) { (error) in

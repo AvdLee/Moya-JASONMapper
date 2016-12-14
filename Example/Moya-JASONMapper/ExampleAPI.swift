@@ -13,7 +13,7 @@ import ReactiveSwift
 import JASON
 
 let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
-let RCStubbedProvider = ReactiveCocoaMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let RCStubbedProvider = ReactiveSwiftMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 
 enum ExampleAPI {
@@ -67,7 +67,7 @@ extension ExampleAPI: JSONMappableTargetType {
 
 // Works but has al the mapping logic in it, I don't want that!
 func requestType<T:ALJSONAble>(_ target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
-    return RCStubbedProvider.request(token: target).flatMap(FlattenStrategy.latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
+    return RCStubbedProvider.request(target).flatMap(FlattenStrategy.latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
         do {
             let jsonObject = try response.mapJSON()
             

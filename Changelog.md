@@ -1,3 +1,7 @@
+# 2.1.1
+- Using Moya beta 5
+- Using ReactiveSwift beta 4
+
 # 2.1.0
 
 - Supporting iOS 8 again
