@@ -1,3 +1,7 @@
+# 2.2.0
+- Using Moya 8.0.0
+- Using ReactiveSwift 1.0.0
+
 # 2.1.1
 - Using Moya beta 5
 - Using ReactiveSwift beta 4

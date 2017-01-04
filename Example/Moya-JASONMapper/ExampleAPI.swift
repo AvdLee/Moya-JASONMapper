@@ -57,6 +57,10 @@ extension ExampleAPI: JSONMappableTargetType {
         }
     }
     var multipartBody: [Moya.MultipartFormData]? { return nil }
+    
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
 }
 
 // Then add an additional request method
@@ -72,12 +76,12 @@ func requestType<T:ALJSONAble>(_ target: ExampleAPI) -> SignalProducer<T, Moya.E
             let jsonObject = try response.mapJSON()
             
             guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
-                throw Moya.Error.jsonMapping(response)
+                throw MoyaError.jsonMapping(response)
             }
             
             return SignalProducer(value: mappedObject)
         } catch let error {
-            return SignalProducer(error: Moya.Error.underlying(error as NSError))
+            return SignalProducer(error: MoyaError.underlying(error as NSError))
         }
     })
 }

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Moya-JASONMapper"
-  s.version          = "2.1.2"
+  s.version          = "2.2.0"
   s.summary          = "Map objects through JASON in combination with Moya"
   s.description  = <<-EOS
     [JASON](https://github.com/delba/JASON) bindings for
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.subspec "Core" do |ss|
     ss.source_files  = "Source/*.swift"
-    ss.dependency "Moya", "8.0.0-beta.6"
+    ss.dependency "Moya", "~> 8.0.0"
     ss.dependency "JASON"
     ss.framework  = "Foundation"
   end
@@ -32,15 +32,14 @@ Pod::Spec.new do |s|
   s.subspec "RxSwift" do |ss|
     ss.source_files = "Source/RxSwift/*.swift"
     ss.dependency "Moya-JASONMapper/Core"
-    ss.dependency "Moya/RxSwift", "8.0.0-beta.6"
-    ss.dependency "RxSwift", "~>3.0.0"
-    ss.dependency "RxCocoa", "~> 3.0.0"
+    ss.dependency "Moya/RxSwift"
+    ss.dependency "RxSwift", "~>3.1.0"
   end
 
-  s.subspec "ReactiveCocoa" do |ss|
-    ss.source_files = "Source/ReactiveCocoa/*.swift"
-    ss.dependency "Moya/ReactiveCocoa"
+  s.subspec "ReactiveSwift" do |ss|
+    ss.source_files = "Source/ReactiveSwift/*.swift"
+    ss.dependency "Moya/ReactiveSwift"
     ss.dependency "Moya-JASONMapper/Core"
-    ss.dependency "ReactiveSwift", "1.0.0-alpha.4"
+    ss.dependency "ReactiveSwift"
   end
 end

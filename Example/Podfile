@@ -8,7 +8,7 @@ def sharedPods
     pod 'Moya', :git => 'https://github.com/Moya/Moya.git'
     pod 'Moya-JASONMapper', :path => '../'
     pod 'Moya-JASONMapper/RxSwift', :path => '../'
-    pod 'Moya-JASONMapper/ReactiveCocoa', :path => '../'
+    pod 'Moya-JASONMapper/ReactiveSwift', :path => '../'
 end
 
 target 'Moya-JASONMapper_Example' do
