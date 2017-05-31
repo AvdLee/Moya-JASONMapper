@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Moya-JASONMapper"
-  s.version          = "2.2.0"
+  s.version          = "2.2.1"
   s.summary          = "Map objects through JASON in combination with Moya"
   s.description  = <<-EOS
     [JASON](https://github.com/delba/JASON) bindings for
@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
+  s.osx.deployment_target = '10.10'
   s.requires_arc = true
 
   s.default_subspec = "Core"
