@@ -12,9 +12,7 @@ import Moya_JASONMapper
 import ReactiveSwift
 import JASON
 
-let stubbedProvider =  MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
-let RCStubbedProvider = ReactiveSwiftMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
-let RXStubbedProvider = RxMoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
+let stubbedProvider = MoyaProvider<ExampleAPI>(stubClosure: MoyaProvider.immediatelyStub)
 
 enum ExampleAPI {
     case getObject
@@ -22,6 +20,11 @@ enum ExampleAPI {
 }
 
 extension ExampleAPI: JSONMappableTargetType {
+    
+    var headers: [String : String]? {
+        return nil
+    }
+    
     var baseURL: URL { return URL(string: "https://httpbin.org")! }
     var path: String {
         switch self {
@@ -46,7 +49,7 @@ extension ExampleAPI: JSONMappableTargetType {
         }
     }
     var task: Task {
-        return .request
+        return .requestPlain
     }
     var responseType: ALJSONAble.Type {
         switch self {
@@ -61,29 +64,6 @@ extension ExampleAPI: JSONMappableTargetType {
     var parameterEncoding: ParameterEncoding {
         return URLEncoding.default
     }
-}
-
-// Then add an additional request method
-// Is not working:
-//func requestType<T:ALJSONAble>(target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
-//    return RCStubbedProvider.request(target).mapObject(target.responseType)
-//}
-
-// Works but has al the mapping logic in it, I don't want that!
-func requestType<T:ALJSONAble>(_ target: ExampleAPI) -> SignalProducer<T, Moya.Error> {
-    return RCStubbedProvider.request(target).flatMap(FlattenStrategy.latest, transform: { (response) -> SignalProducer<T, Moya.Error> in
-        do {
-            let jsonObject = try response.mapJSON()
-            
-            guard let mappedObject = T(jsonData: JSON(jsonObject)) else {
-                throw MoyaError.jsonMapping(response)
-            }
-            
-            return SignalProducer(value: mappedObject)
-        } catch let error {
-            return SignalProducer(error: MoyaError.underlying(error as NSError))
-        }
-    })
 }
 
 protocol JSONMappableTargetType: TargetType {

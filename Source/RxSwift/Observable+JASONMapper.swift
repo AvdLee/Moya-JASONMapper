@@ -29,3 +29,23 @@ public extension ObservableType where E == Response {
         }
     }
 }
+
+public extension PrimitiveSequence where Element == Response {
+    
+    /// Maps data received from the signal into an object which implements the ALJSONAble protocol.
+    /// If the conversion fails, the signal errors.
+    
+    public func map<T: ALJSONAble>(to type: T.Type) -> PrimitiveSequence<Trait, T> {
+        return flatMap { response -> PrimitiveSequence<Trait, T> in
+            return PrimitiveSequence<Trait, T>.just(try response.map(to: T.self))
+        }
+    }
+    
+    /// Maps data received from the signal into an array of objects which implement the ALJSONAble protocol.
+    /// If the conversion fails, the signal errors.
+    public func map<T: ALJSONAble>(to type: [T.Type]) -> PrimitiveSequence<Trait, [T]> {
+        return flatMap { response -> PrimitiveSequence<Trait, [T]> in
+            return PrimitiveSequence<Trait, [T]>.just(try response.map(to: [T.self]))
+        }
+    }
+}

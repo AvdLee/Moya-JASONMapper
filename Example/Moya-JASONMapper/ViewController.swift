@@ -10,6 +10,7 @@ import UIKit
 import Moya
 import RxSwift
 import ReactiveSwift
+import Moya_JASONMapper
 
 class ViewController: UIViewController {
 
@@ -24,9 +25,11 @@ class ViewController: UIViewController {
     
     func exampleRequestDirectMapping(){
         // This instead works, with type definition
-        let producer:SignalProducer<GetResponse, Moya.Error> = requestType(ExampleAPI.getObject).on(value: { (object) in
-            print("Example origin \(object.origin)")
-        })
+        let producer:SignalProducer<GetResponse, MoyaError> = stubbedProvider.reactive.request(ExampleAPI.getObject)
+            .map(to: GetResponse.self)
+            .on(value: { (object) in
+                print("Example origin \(object.origin)")
+            })
         producer.start()
     }
     
@@ -47,7 +50,7 @@ class ViewController: UIViewController {
     }
     
     func reactiveCocoaObjectMapping(){
-        RCStubbedProvider.request(ExampleAPI.getObject)
+        stubbedProvider.reactive.request(ExampleAPI.getObject)
             .map(to: GetResponse.self)
             .on(failed: { (error) -> () in
                 print(error)
@@ -58,11 +61,12 @@ class ViewController: UIViewController {
     
     func rxSwiftObjectMapping(){
         let disposeBag = DisposeBag()
-        RXStubbedProvider.request(ExampleAPI.getObject)
+        
+        stubbedProvider.rx.request(ExampleAPI.getObject)
             .map(to: GetResponse.self)
-            .subscribe(onNext: { (response) -> Void in
+            .subscribe(onSuccess: { (response) in
                 print(response)
-            }, onError: { (error) -> Void in
+            }, onError: { (error) in
                 print(error)
             }).addDisposableTo(disposeBag)
     }
