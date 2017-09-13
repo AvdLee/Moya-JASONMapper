@@ -1,3 +1,8 @@
+# 2.3.0
+- Using Moya 9.0.0
+- Using ReactiveSwift 2.0.1
+- Using RxSwift 3.6.1
+
 # 2.2.0
 - Using Moya 8.0.0
 - Using ReactiveSwift 1.0.0
